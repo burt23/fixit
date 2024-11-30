@@ -14,6 +14,8 @@
 
     <!-- CSS Stylesheet Link -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
@@ -21,12 +23,12 @@
         <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
             <defs>
                 <linearGradient id="bgGradient" gradientTransform="rotate(90)">
-                    <stop offset="0%" stop-color="#ff7e5f">
-                        <animate attributeName="stop-color" values="#ff7e5f;#feb47b;#ff7e5f" dur="10s"
+                    <stop offset="0%" stop-color="#81D8D0">
+                        <animate attributeName="stop-color" values="#81D8D0;#008080;#800080;#81D8D0" dur="15s"
                             repeatCount="indefinite" />
                     </stop>
-                    <stop offset="100%" stop-color="#feb47b">
-                        <animate attributeName="stop-color" values="#feb47b;#ff7e5f;#feb47b" dur="10s"
+                    <stop offset="100%" stop-color="#008080">
+                        <animate attributeName="stop-color" values="#008080;#800080;#81D8D0;#008080" dur="15s"
                             repeatCount="indefinite" />
                     </stop>
                 </linearGradient>
@@ -38,7 +40,6 @@
 
     <!-- Main Content -->
     <div class="content">
-
         <!-- Header -->
         <section class="header">
             <div>
@@ -46,43 +47,30 @@
                 <p class="tagline slide-in">Do it right or do it twice</p>
             </div>
         </section>
+        <section class="pricing-info">
+            <h2>Standard Rate </h2>
 
-        <!-- Services Section -->
-        <section class="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li class="service-item zoom-in">
-                    <h3>3D Printing</h3>
-                    <p>Custom prototypes, models, and parts with precision and speed.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Auto Work</h3>
-                    <p>Expert maintenance and repair services to keep your vehicle running smoothly.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Bike Work (E-bikes)</h3>
-                    <p>Specialized in e-bike repairs and upgrades for an enhanced riding experience.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Item Assembly</h3>
-                    <p>Expert assembly services for a wide range of items.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Business Solutions</h3>
-                    <p>Customized solutions for your business needs.</p>
-                </li>
-            </ul>
+            <p>
+                $75/Hour with a 2 hour minimum.
+            </p>
         </section>
 
-        <section id="yelp">
-            <div class="yelp-link bounce-in">
-                <a href="https://biz.yelp.com/biz_info/seFmSxwpOilWPooRoKLuPg" target="_blank">
-                    <img src="images/yelp.png" alt="Yelp Logo">
-                    <p>Check out our reviews on Yelp!</p>
-                </a>
-            </div>
+        <section class="pricing-info">
+            <h2>
+                Travel Fee
+            </h2>
+
+            <p>
+                Our standard travel fee or service call fee is $30. This covers parking, tolls, traffic, gas, and all
+                other travel related expenses for your service call.
+                This rate applies to all service calls within 10
+                miles of the 78701 zip code. Additional travel fees may apply for service calls outside of this area.
+            </p>
         </section>
+
         <footer class="footer">
+            <p><a href="mailto:info@fixitworks.com">info@fixitworks.com</a></p>
+            <p><a href="tel:5127771176">512.777.1176</a></p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="contact.html">Contact</a>
@@ -93,11 +81,10 @@
         </footer>
 
     </div>
-    </section>
 
-    </div>
 
 
 </body>
+
 
 </html>
