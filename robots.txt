@@ -1,0 +1,7 @@
+# robots.txt for FixItWorks website
+
+User-agent: *
+Disallow:
+
+Sitemap: https://www.fixitworks.com/sitemap.xml
+
