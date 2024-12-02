@@ -17,25 +17,6 @@
 </head>
 
 <body>
-    <div class="svg-background">
-        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-            <defs>
-                <linearGradient id="bgGradient" gradientTransform="rotate(90)">
-                    <stop offset="0%" stop-color="#ff7e5f">
-                        <animate attributeName="stop-color" values="#ff7e5f;#feb47b;#ff7e5f" dur="10s"
-                            repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="100%" stop-color="#feb47b">
-                        <animate attributeName="stop-color" values="#feb47b;#ff7e5f;#feb47b" dur="10s"
-                            repeatCount="indefinite" />
-                    </stop>
-                </linearGradient>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#bgGradient)">
-            </rect>
-        </svg>
-    </div>
-
     <!-- Main Content -->
     <div class="content">
 
@@ -82,13 +63,15 @@
                 </a>
             </div>
         </section>
+        <section class="contact-info">
+
+
+            <h4><a href="mailto:info@fixitworks.com">info@fixitworks.com</a></h4>
+            <h4><a href="tel:5127771176">512.777.1176</a></h4>
+        </section>
         <footer class="footer">
 
-            <div class="footer-info">
 
-                <p><a href="mailto:info@fixitworks.com">info@fixitworks.com</a></p>
-                <p><a href="tel:5127771176">512.777.1176</a></p>
-            </div>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="contact.html">Contact</a>
@@ -101,8 +84,9 @@
     </div>
     </section>
 
-    </div>
 
+    <!-- JavaScript for SVG Backgrounds -->
+    <script src="svg-backgrounds.js"></script>
 
 </body>
 
