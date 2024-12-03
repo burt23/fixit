@@ -11,7 +11,7 @@ class CustomServices extends HTMLElement {
      <h2>Our Services</h2>
             <ul>
                 <li class="service-item zoom-in">
-                    <h3>3D Printing</h3>
+                    <h3><b>3D Printing</b></h3>
                     <p>Custom prototypes, models, and parts with precision and speed. Custom CAD Services available.</p>
                 </li>
                 <li class="service-item zoom-in">
@@ -41,7 +41,6 @@ class CustomServices extends HTMLElement {
     const style = document.createElement("style");
     style.textContent = `
 ul {
-  padding-left: 20px;
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;

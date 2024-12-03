@@ -23,36 +23,17 @@
       rel="stylesheet"
       href="http://embed.typeform.com/next/css/popup.css"
     />
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const { open, close, toggle, refresh } =
-          window.tf.createPopup("szzt6Eul");
-        const button = document.querySelector(".typeform-button");
-        if (button) {
-          button.addEventListener("click", () => {
-            toggle();
-            console.log("Typeform popup toggled");
-          });
-        } else {
-          console.error("Button with class 'typeform-button' not found.");
-        }
-      });
-    </script>
   </head>
-  <script src="custom-header.js"></script>
-  <script src="custom-contact.js"></script>
-  <script src="custom-footer.js"></script>
   <body>
     <div class="content">
       <custom-header></custom-header>
-
-      <section class="contact-info">
-        <h2>Get in touch</h2>
-        <button class="typeform-button">General Inquiry</button>
-      </section>
-
+      <custom-typeform-button></custom-typeform-button>
       <custom-contact></custom-contact>
       <custom-footer></custom-footer>
     </div>
+    <script src="custom-header.js" defer></script>
+    <script src="custom-contact.js" defer></script>
+    <script src="custom-footer.js" defer></script>
+    <script src="custom-typeform-button.js" defer></script>
   </body>
 </html>

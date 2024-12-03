@@ -33,8 +33,10 @@ html {
   width: 100vw;
   font-family: "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
   color: #d5d1cc;
-  font-weight: 300;
+  font-weight: 100;
   background-color: #1d2021;
+  font-size: 1.6rem;
+  line-height: 1.6;
   overflow: auto;
   position: relative;
 }
@@ -64,91 +66,6 @@ a {
   font-weight: 100;
 }
 
-a:hover,
-a:focus {
-  color: #63b3ed;
-  text-decoration: underline;
-  outline: none;
-}
-
-a:active {
-  color: #4a90e2;
-}
-
-a:visited {
-  color: #5a9bd5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #dbd8da;
-  margin: 1rem 0;
-  font-family: "Palatino", "Bookman", "Georgia", "serif";
-}
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2.4rem;
-}
-h3 {
-  font-size: 2rem;
-}
-h4 {
-  font-size: 1.3rem;
-}
-h5 {
-  font-size: 1rem;
-}
-h6 {
-  font-size: 0.8rem;
-}
-/* // orange accent ff8f4d */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-  text-decoration: none !important;
-}
-
-.services ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  list-style: none;
-}
-
-.typeform-button {
-  border: 1px solid rgb(130, 121, 107);
-  background-image: initial;
-  background-color: initial;
-  color: #e0e0e0;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.typeform-button:hover {
-  background-color: #777777;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-}
-
-.typeform-button:active {
-  background-color: #999999;
-  transform: translateY(2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 .photo-placeholder {
   width: 150px;
   height: 150px;
@@ -159,25 +76,10 @@ li {
   border: 2px solid #555555;
 }
 
-.tf-v1-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.tf-v1-popup iframe {
-  width: 100vw;
-  height: 100vh;
-}
-
 .content {
   display: flex;
   flex-direction: column;
-  z-index: 11;
+  z-index: 1;
   align-items: center;
   max-width: 800px;
   margin: 0 auto;

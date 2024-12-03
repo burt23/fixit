@@ -11,10 +11,8 @@ class CustomHeader extends HTMLElement {
 
     header.innerHTML = `
 
-            <div>
-            <span><h1>FixIT WORKS</h1></span>
+            <span><h2>FixIT WORKS</h2></span>
                 <p class="tagline fade-in"><i>Do it Right or Do it Twice!!</i></p>
-            </div>
         `;
 
     // Append styles
@@ -23,15 +21,17 @@ class CustomHeader extends HTMLElement {
             .header {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                padding-bottom:  2rem !important;
+                align-items: baseline;
                 background-image: initial;
+                gap: 4.2rem;
                 background-color: initial;
                 flex-direction: row;
                 transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
                 width: 100vw;
                 background-color: #181a1b;
             }
+                h2{
+                margin: }
                 .header > div > h1 {
                  font-family: 'Faster', sans-serif !important;
                 }
@@ -43,7 +43,6 @@ class CustomHeader extends HTMLElement {
             }
             
             .tagline {
-                font-size: 1.2em;
                 color: #ccc;
                 opacity: 0;
                 font-weight: 600;

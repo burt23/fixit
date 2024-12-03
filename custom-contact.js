@@ -4,10 +4,10 @@ class CustomContact extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: "open" });
 
-    const header = document.createElement("section");
-    header.className = "header";
+    const section = document.createElement("section");
+    section.className = "custom-contact";
 
-    header.innerHTML = `
+    section.innerHTML = `
         <section id="yelp">
             <div class="yelp-link bounce-in">
                 <a href="https://biz.yelp.com/biz_info/seFmSxwpOilWPooRoKLuPg" target="_blank">
@@ -24,20 +24,20 @@ class CustomContact extends HTMLElement {
             <div>
 
                 <div class="contact-item">
-                    <h3 class="contact-label">Email</h3>
+                    <label class="contact-label">Email</label>
                     <a class="contact-link" href="mailto:info@fixitworks.com">info@fixitworks.com</a>
                 </div>
                 </div>
                 <div>
                     <div class="contact-item">
-                        <h3 class="contact-label">Phone</h3>
+                        <label class="contact-label">Phone</label>
                     <a class="contact-link" href="tel:5127771176">512.777.1176</a>
                 </div>
                 </div>
                 <div>
                 <div class="contact-item">
-                    <h3 class="contact-label">Location</h3>
-                    <p class="contact-text">Austin, TX</p>
+                    <label class="contact-label">Location</label>
+                    <span class="contact-text">Austin, TX</span>
                 </div>
                 </div>
             </div>
@@ -52,9 +52,7 @@ class CustomContact extends HTMLElement {
             animation: bounceIn 2s ease-in-out;
         }
 
-        .yelp-link a {
-            color: #e0e0e0;
-        }       
+     
         .yelp-link img {
             width: 100px;
             margin-bottom: 0.5em;
@@ -79,24 +77,14 @@ class CustomContact extends HTMLElement {
         }
 
         .contact-item {
-            flex: 1 1 200px;
-            text-align: center;
-        }
+            display: flex;
+            align-items: center;        
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 200px;
 
-        .contact-label {
-            font-weight: bold;
-            margin-right: 0.5em;
-            color: #ffffff;
-        }
-
-        .contact-link {
-            color: #9d9588;
-            text-decoration: none;
-        }
-
-        .contact-text {
-            color: #9d9588;
-            margin: 0;
         }
 
         /* Ensure target sections have position: relative */
@@ -125,7 +113,7 @@ class CustomContact extends HTMLElement {
 
     // Attach the elements to the shadow DOM
     shadow.appendChild(style);
-    shadow.appendChild(header);
+    shadow.appendChild(section);
   }
 
   connectedCallback() {
