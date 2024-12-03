@@ -1,29 +1,26 @@
-/* Italic Variant */
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: italic;
-  src: url("assets/fonts/RobotoMono-Italic.ttf") format("truetype");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-}
-
-/* Normal Variant */
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  src: url("assets/fonts/RobotoMono.ttf") format("truetype");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-}
-
-@font-face {
-  font-family: "Honk";
-  font-style: normal;
-  src: url("assets/fonts/Honk.ttf") format("truetype");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-}
 /* Reset and Basic Styles */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+svg path {
+  transition: 0.1s;
+}
+/* svg:hover path {
+  d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
+} */
+
 * {
   margin: 0;
   padding: 0;
@@ -34,8 +31,7 @@ body,
 html {
   height: 100vh;
   width: 100vw;
-  font-family: "Roboto Mono", "Roboto Mono";
-  line-height: 1.6;
+  font-family: "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
   color: #d5d1cc;
   font-weight: 300;
   background-color: #1d2021;
@@ -56,10 +52,8 @@ section .services {
 }
 
 p {
-  font-family: "Roboto Mono";
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-family: "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
+  font-weight: 100;
   word-spacing: 0.005em;
 }
 
@@ -67,7 +61,7 @@ a {
   color: #52b1ff;
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
-  font-weight: 500;
+  font-weight: 100;
 }
 
 a:hover,
@@ -93,9 +87,7 @@ h5,
 h6 {
   color: #dbd8da;
   margin: 1rem 0;
-  font-family: "Honk";
-  scale: 1;
-  line-height: 1.2rem;
+  font-family: "Palatino", "Bookman", "Georgia", "serif";
 }
 h1 {
   font-size: 3rem;
@@ -131,24 +123,6 @@ li {
   justify-content: center;
   gap: 1rem;
   list-style: none;
-}
-
-.service-item {
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  flex: 1 1 200px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
-}
-
-.service-item p {
-  color: #b0b0b0;
 }
 
 .typeform-button {

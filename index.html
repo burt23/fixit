@@ -20,45 +20,22 @@
 <script src="custom-contact.js"></script>
 <script src="custom-footer.js"></script>
 <script src="custom-header.js"></script>
+<script src="custom-hero.js"></script>
+<script src="custom-services.js"></script>
 <body>
     <!-- Main Content -->
     <div class="content">
-
+        <div class="svg-container">
+            <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
+            <svg viewbox="0 0 800 400" class="svg">
+              <path id="curve" fill="#50c6d8" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+              </path>
+            </svg>
+          </div>
         <custom-header></custom-header>
-
-        <section class="services">
-            <h1>Our Services</h1>
-            <ul>
-                <li class="service-item zoom-in">
-                    <h3>3D Printing</h3>
-                    <p>Custom prototypes, models, and parts with precision and speed. Custom CAD Services available.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Automotive Technician</h3>
-                    <p>Expert maintenance and repair services to keep your vehicle running smoothly.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Bicycle Mechanic (Inc. E-Bikes)</h3>
-                    <p>Specialized bicycle technician available for all your bike needs from tune-ups to upgrades.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Item Assembly</h3>
-                    <p>Expert assembly services for a wide range of items. We've got the tools and expertise to get it
-                        built right the first time.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Business Solutions</h3>
-                    <p>Customized solutions for your business needs. Call us for a free consultation.</p>
-                </li>
-                <li class="service-item zoom-in">
-                    <h3>Stereo Installation</h3>
-                    <p>Whether its a home or car stereo, we've got you covered. We love music!</p>
-                </li>
-            </ul>
-        </section>
-
+        <custom-hero></custom-hero>
+        <custom-services></custom-services>
         <custom-contact></custom-contact>
-
         <custom-footer></custom-footer>
 
     </div>
@@ -67,3 +44,4 @@
 </body>
 
 </html>
+ 

@@ -24,7 +24,7 @@ class CustomHeader extends HTMLElement {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 20px;
+                padding-bottom:  2rem !important;
                 background-image: initial;
                 background-color: initial;
                 flex-direction: row;
@@ -32,6 +32,9 @@ class CustomHeader extends HTMLElement {
                 width: 100vw;
                 background-color: #181a1b;
             }
+                .header > div > h1 {
+                 font-family: 'Faster', sans-serif !important;
+                }
             
             #logo {
                 height: 115px;

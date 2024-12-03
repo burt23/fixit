@@ -24,19 +24,19 @@ class CustomContact extends HTMLElement {
             <div>
 
                 <div class="contact-item">
-                    <h3 class="contact-label">Email:</h3>
+                    <h3 class="contact-label">Email</h3>
                     <a class="contact-link" href="mailto:info@fixitworks.com">info@fixitworks.com</a>
                 </div>
                 </div>
                 <div>
                     <div class="contact-item">
-                        <h3 class="contact-label">Phone:</h3>
+                        <h3 class="contact-label">Phone</h3>
                     <a class="contact-link" href="tel:5127771176">512.777.1176</a>
                 </div>
                 </div>
                 <div>
                 <div class="contact-item">
-                    <h3 class="contact-label">Location:</h3>
+                    <h3 class="contact-label">Location</h3>
                     <p class="contact-text">Austin, TX</p>
                 </div>
                 </div>
@@ -61,7 +61,6 @@ class CustomContact extends HTMLElement {
         }
 
         .contact-info {
-            background: linear-gradient(15deg, #1a1a1a, #2a2a2a);
             width: 100vw !important;
             padding: 1rem !important;
             margin: 0 !important;

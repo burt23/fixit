@@ -24,10 +24,18 @@
       href="http://embed.typeform.com/next/css/popup.css"
     />
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("DOMContentLoaded", () => {
         const { open, close, toggle, refresh } =
           window.tf.createPopup("szzt6Eul");
-        document.querySelector("#button").onclick = toggle;
+        const button = document.querySelector(".typeform-button");
+        if (button) {
+          button.addEventListener("click", () => {
+            toggle();
+            console.log("Typeform popup toggled");
+          });
+        } else {
+          console.error("Button with class 'typeform-button' not found.");
+        }
       });
     </script>
   </head>
