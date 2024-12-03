@@ -18,9 +18,29 @@ class CustomContact extends HTMLElement {
         </section>
         <section class="contact-info">
 
+            <h1>Contact Info</h1>
 
-            <h4><a href="mailto:info@fixitworks.com">info@fixitworks.com</a></h4>
-            <h4><a href="tel:5127771176">512.777.1176</a></h4>
+            <div class="contact-container">
+            <div>
+
+                <div class="contact-item">
+                    <h3 class="contact-label">Email:</h3>
+                    <a class="contact-link" href="mailto:info@fixitworks.com">info@fixitworks.com</a>
+                </div>
+                </div>
+                <div>
+                    <div class="contact-item">
+                        <h3 class="contact-label">Phone:</h3>
+                    <a class="contact-link" href="tel:5127771176">512.777.1176</a>
+                </div>
+                </div>
+                <div>
+                <div class="contact-item">
+                    <h3 class="contact-label">Location:</h3>
+                    <p class="contact-text">Austin, TX</p>
+                </div>
+                </div>
+            </div>
         </section>
     `;
 
@@ -33,18 +53,51 @@ class CustomContact extends HTMLElement {
         }
 
         .yelp-link a {
-            text-decoration: none;
             color: #e0e0e0;
         }       
         .yelp-link img {
             width: 100px;
             margin-bottom: 0.5em;
+        }
 
         .contact-info {
             background: linear-gradient(15deg, #1a1a1a, #2a2a2a);
             width: 100vw !important;
-            padding: 0 !important;
+            padding: 1rem !important;
             margin: 0 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .contact-item {
+            flex: 1 1 200px;
+            text-align: center;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            margin-right: 0.5em;
+            color: #ffffff;
+        }
+
+        .contact-link {
+            color: #9d9588;
+            text-decoration: none;
+        }
+
+        .contact-text {
+            color: #9d9588;
+            margin: 0;
         }
 
         /* Ensure target sections have position: relative */
@@ -52,6 +105,18 @@ class CustomContact extends HTMLElement {
         .contact-info {
             position: relative;
             overflow: hidden;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-label {
+                margin-bottom: 0.3em;
+            }
         }
     `;
     const linkElem = document.createElement("link");
@@ -66,12 +131,12 @@ class CustomContact extends HTMLElement {
 
   connectedCallback() {
     // Lifecycle method called when the element is added to the DOM
-    console.log(" added to the page.");
+    console.log("CustomContact added to the page.");
   }
 
   disconnectedCallback() {
     // Cleanup if needed when the element is removed from the DOM
-    console.log(" removed from the page.");
+    console.log("CustomContact removed from the page.");
   }
 }
 

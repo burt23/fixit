@@ -10,8 +10,9 @@ class CustomHeader extends HTMLElement {
     header.className = "header";
 
     header.innerHTML = `
-            <img id="logo" src="images/logo_transparent.png" alt="FixIT Works Logo">
+
             <div>
+            <span><h1>FixIT WORKS</h1></span>
                 <p class="tagline fade-in"><i>Do it Right or Do it Twice!!</i></p>
             </div>
         `;
@@ -21,15 +22,15 @@ class CustomHeader extends HTMLElement {
     style.textContent = `
             .header {
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 padding: 20px;
                 background-image: initial;
                 background-color: initial;
                 flex-direction: row;
-                border: 1px solid #333;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-                border-radius: 15px;
                 transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                width: 100vw;
+                background-color: #181a1b;
             }
             
             #logo {
@@ -43,7 +44,7 @@ class CustomHeader extends HTMLElement {
                 color: #ccc;
                 opacity: 0;
                 font-weight: 600;
-                font-family: 'Arial', sans-serif;
+                font-family: 'Honk', sans-serif;
                 transition: opacity 2s ease-in;
             }
             .fade-in {
@@ -60,6 +61,12 @@ class CustomHeader extends HTMLElement {
     }
 }
         `;
+
+    // link stylesheet
+    const linkElem = document.createElement("link");
+    linkElem.setAttribute("rel", "stylesheet");
+    linkElem.setAttribute("href", "styles.css");
+    shadow.appendChild(linkElem);
 
     // Attach the elements to the shadow DOM
     shadow.appendChild(style);

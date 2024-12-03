@@ -19,20 +19,24 @@ class CustomFooter extends HTMLElement {
     const style = document.createElement("style");
     style.textContent = `
         .footer {
-            background: #1d2021 !important;
-            color: #ffffff;
+            background: #181a1b !important;
             width: 100vw;
-            padding: 30px 0;
+            padding: 3rem;
             text-align: center;
         }
 
         .footer-links {
             display: flex;
-            justify-content: center;
+            flex-direction: row;
             flex-wrap: wrap;
-            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem;
             max-width: 800px;
             margin: 0 auto;
+        }
+        a {
+            color: #9d9588!important;
         }
         `;
 
