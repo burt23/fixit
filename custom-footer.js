@@ -11,7 +11,7 @@ class CustomFooter extends HTMLElement {
         <a href="index.html">Home</a>
         <a href="pricing.html">Pricing</a>
         <a href="privacy.html">Privacy</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-date" id="footer-date">

@@ -8,6 +8,25 @@ class CustomContact extends HTMLElement {
     section.className = "custom-contact";
 
     section.innerHTML = `
+<section class="contact-info">
+
+            <h1>Contact Info</h1>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <label class="contact-label">Email</label>
+                    <a class="contact-link" href="mailto:info@fixitworks.com">info@fixitworks.com</a>
+                </div>
+                <div class="contact-item">
+                    <label class="contact-label">Phone</label>
+                    <a class="contact-link" href="tel:5127771176">512.777.1176</a>
+                </div>
+                <div class="contact-item">
+                    <label class="contact-label">Location</label>
+                    <span class="contact-text">Austin, TX</span>
+                </div>
+            </div>
+        </section>
+
         <section id="yelp">
             <div class="yelp-link bounce-in">
                 <a href="https://biz.yelp.com/biz_info/seFmSxwpOilWPooRoKLuPg" target="_blank">
@@ -16,33 +35,7 @@ class CustomContact extends HTMLElement {
                 </a>
             </div>
         </section>
-        <section class="contact-info">
-
-            <h1>Contact Info</h1>
-
-            <div class="contact-container">
-            <div>
-
-                <div class="contact-item">
-                    <label class="contact-label">Email</label>
-                    <a class="contact-link" href="mailto:info@fixitworks.com">info@fixitworks.com</a>
-                </div>
-                </div>
-                <div>
-                    <div class="contact-item">
-                        <label class="contact-label">Phone</label>
-                    <a class="contact-link" href="tel:5127771176">512.777.1176</a>
-                </div>
-                </div>
-                <div>
-                <div class="contact-item">
-                    <label class="contact-label">Location</label>
-                    <span class="contact-text">Austin, TX</span>
-                </div>
-                </div>
-            </div>
-        </section>
-    `;
+            `;
 
     // Append styles
     const style = document.createElement("style");
@@ -109,6 +102,10 @@ class CustomContact extends HTMLElement {
     const linkElem = document.createElement("link");
     linkElem.setAttribute("rel", "stylesheet");
     linkElem.setAttribute("href", "styles.css");
+    const linkElem2 = document.createElement("link");
+    linkElem2.setAttribute("rel", "stylesheet");
+    linkElem2.setAttribute("href", "assets/css/milligram.min.css");
+
     shadow.appendChild(linkElem);
 
     // Attach the elements to the shadow DOM

@@ -7,40 +7,44 @@ class CustomTypeformButton extends HTMLElement {
     section.className = "section";
 
     section.innerHTML = `
-          <section class="general-inquiry">
-        <h2>Get in touch</h2>
-        <button id="tbtn">General Inquiry</button>
+      <section id="general-inquiry">
+        <h2>Get it fixed today.</h2>
+        <button class="button button-outline">General Inquiry</button>
       </section>
     `;
+    const stylesheet = new CSSStyleSheet();
 
-    const style = document.createElement("style");
-    style.textContent = `
-      /* Add your styles here */
+    stylesheet.replaceSync(`
+        #general-inquiry {
+        width: 100vw;
+        background-color: #17191a;
+        padding: 1rem;
+        }
 
-.tf-v1-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  .tf-v1-popup iframe {
-    width: 100vw;
-    height: 100vh;
-  }
-    `;
+        .tf-v1-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .tf-v1-popup iframe {
+            width: 100vw;
+            height: 100vh;
+        }
+    `);
+
+    shadow.adoptedStyleSheets = [stylesheet];
 
     const linkElem = document.createElement("link");
     linkElem.setAttribute("rel", "stylesheet");
-    linkElem.setAttribute("href", "styles.css");
-    shadow.appendChild(linkElem);
+    linkElem.setAttribute("href", "assets/css/milligram.min.css");
 
-    // Attach the elements to the shadow DOM
-    shadow.appendChild(style);
     shadow.appendChild(section);
+    shadow.appendChild(linkElem);
   }
 
   connectedCallback() {

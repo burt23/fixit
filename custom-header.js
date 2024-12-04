@@ -29,6 +29,7 @@ class CustomHeader extends HTMLElement {
                 transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
                 width: 100vw;
                 background-color: #181a1b;
+                padding: 3rem !important;
             }
                 h2{
                 margin: }
